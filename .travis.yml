@@ -2,7 +2,7 @@ language: ruby
 before_install: 
   gem install bundler --pre
 before_script:
-- rm -rf _site
+- rm -rf public
 script:
 - bundle exec jekyll build
 branches:
