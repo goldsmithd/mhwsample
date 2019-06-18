@@ -1,8 +1,8 @@
 language: ruby
 before_script:
-- rm -rf _site
+ - rm -rf _site
 script:
-- bundle exec jekyll build
+ - bundle exec jekyll build
 branches:
  only:
  - master
