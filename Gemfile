@@ -32,4 +32,4 @@ gem 'jekyll-compose', group: [:jekyll_plugins]
 
 gem "html-proofer"
 
-gem "bundler" "~> 2.0.2"
+gem "bundler", "~> 2.0.2"
