@@ -31,3 +31,5 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 gem 'jekyll-compose', group: [:jekyll_plugins]
 
 gem "html-proofer"
+
+gem "bundler" "~> 2.0.2"
