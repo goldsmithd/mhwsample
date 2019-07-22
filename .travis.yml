@@ -11,5 +11,5 @@ language: ruby
 rvm: 
   - "2.4.1"
 script: "jekyll --version"
-script: "bundle exec jekyll build"
+#script: "bundle exec jekyll build"
 sudo: false
