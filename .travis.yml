@@ -15,5 +15,6 @@ notifications:
 rvm: 
   - "2.4.1"
 #script: ./script/cibuild n
-script: bundle exec jekyll build
+#script: bundle exec jekyll build
+script: jekyll build
 sudo: false
