@@ -10,6 +10,6 @@ env:
 language: ruby
 rvm: 
   - "2.4.1"
-script: "bundle --version"
+script: "jekyll --version"
 script: "bundle exec jekyll build"
 sudo: false
