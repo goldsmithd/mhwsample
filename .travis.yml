@@ -1,20 +1,8 @@
---- 
-addons: 
-  apt: 
-    packages: 
-      - libcurl4-openssl-dev
-before_script: 
-  - "chmod +x ./script/cibuild"
-cache: bundler
-env: 
-  global: 
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 language: ruby
-notifications: 
-  email: false
-rvm: 
-  - "2.4.1"
-#script: ./script/cibuild n
-#script: bundle exec jekyll build
-script: jekyll build
-sudo: false
+rvm:
+- 2.2.0
+script: bundle exec jekyll build
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
