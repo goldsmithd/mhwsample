@@ -1,0 +1,10 @@
+language: ruby
+before_install: 
+  gem install bundler --pre
+before_script:
+- rm -rf public
+script:
+- bundle exec jekyll build
+branches:
+ only:
+ - master
