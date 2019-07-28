@@ -10,32 +10,32 @@ before_script:
 # the `install` step will run `bundle install` by default. 
 script: ./script/cibuild
 
-before_deploy:
-  - zip -r latest *
-  - mkdir -p dpl_cd_upload
-  - mv latest.zip dpl_cd_upload/latest.zip
+#before_deploy:
+#  - zip -r latest *
+#  - mkdir -p dpl_cd_upload
+#  - mv latest.zip dpl_cd_upload/latest.zip
 
-deploy:
-  - provider: s3
-    # rest of S3 deployment for MyApp.zip
-    # ⋮
-  - provider: codedeploy
-    access_key_id: $AKEY
-    secret_access_key: $ASEC
-    bucket: goldsmithd.github.io
-    skip_cleanup: true
-    acl: public_read  
-    key: latest/MyApp.zip
-    local_dir: public
+#deploy:
+#  - provider: s3
+#    # rest of S3 deployment for MyApp.zip
+#    # ⋮
+#  - provider: codedeploy
+#    access_key_id: $AKEY
+#    secret_access_key: $ASEC
+#    bucket: goldsmithd.github.io
+#    skip_cleanup: true
+#    acl: public_read  
+#    key: latest/MyApp.zip
+#    local_dir: public
 
 # deply to github
-#deploy:
-#  provider: pages
-#  skip-cleanup: true
-#  github-token: $GITHUB_TOKEN
-#  local_dir: public
-#  on:
-#    branch: master
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local_dir: public
+  on:
+    branch: master
 
 
 
